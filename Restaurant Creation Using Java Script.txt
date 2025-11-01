@@ -1,29 +1,150 @@
-JavaScript Served Hot — Restaurant Edition! 🍕
+<!DOCTYPE html>
+<html lang="en">
 
-Practicing loops and conditions got tastier when I turned it into a restaurant project 😄
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Bites Restaurant</title>
+    <link rel="Icon" type="image/png" href="/Restaurant Logo.png">
+    <style>
+        body {
+            background-image: url(https://png.pngtree.com/background/20210710/original/pngtree-restaurant-menu-background-material-picture-image_1052797.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+        }
 
-let menu = ["Idly", "Dosai", "Pongal"];
-for(let i=0; i<menu.length; i++){
-  document.write(menu[i] + " is ready to serve 🍽️<br>");
-}
-
-let pancakes = 3, customer = 1;
-while(pancakes > 0){
-  document.write("Serving Customer #" + customer + "<br>");
-  pancakes--; customer++;
-}
-
-do {
-  document.write("Preparing one more pancake 🥞<br>");
-} while(pancakes > 0);
-
-let order = "Ready";
-switch(order){
-  case "Ready": document.write("✅ Order is ready to serve!"); break;
-  default: document.write("⏳ Cooking...");
-}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            /* Moves items to opposite sides */
+            align-items: center;
+            /* Vertically centers logo and links */
+            background-color: rgb(156, 226, 156);
+            margin: 5px;
+            padding: 5px;
+        }
 
 
-From for loops to do...while, every concept felt more engaging when applied to a real-world scenario — like running a restaurant! 🍴
+        .Num2 a {
+            font-weight: bolder;
+            justify-content: space-between;
+            text-decoration: none;
+            margin: 10px;
+            padding: 10px;
+            font-size: x-large;
+            color: black;
+        }
 
-#JavaScript #WebDevelopment #CodingJourney #Frontend #LearningByDoing
+        main {
+            text-align: center;
+            margin-top: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="Num1">
+                <img src="/Restaurant Logo.png" alt="Profile" width="130px" height="60px"
+                    style="vertical-align: middle;">
+            </div>
+            <div class="Num2">
+                <a href="">Home</a>
+                <a href="">Menus</a>
+                <a href="">Find US</a>
+                <a href="">Our Story</a>
+                <a href="">Community</a>
+            </div>
+        </nav>
+    </header><br>
+    <main>
+        <h2>Welcome to Fresh Bites Restaurant </h2><br>
+        <p>A restaurant chain that offers a variety of quick bites, from sandwiches and starters to pizzas and desserts,
+            with some locations also featuring a full multicuisine menu.</p>
+
+    </main>
+
+    <h2 style="text-align: center; color: #333;">🕒 Time-Based Greetings</h2>
+    <script>
+        let hour = [11, 13, 20];
+        hour.forEach(function (hour) {
+            if (hour < 12) {
+                document.write('<span style="background-color: #FFEB3C; color: black; padding: 2px; "> Good morning! 🌞 We’re serving breakfast now.</span><br><br>');
+            } else if (hour < 18) {
+                document.write('<span style="background-color: #FFB74D; color: black; padding: 2px; ">Good afternoon! 🍛 Lunch is being served.</span><br><br>');
+            } else {
+                document.write('<span style="background-color: pink; color: black; padding: 2px; ">Good evening! 🍽️ Dinner time has begun.</span><br><br>');
+            }
+        });
+    </script>
+    <h2 style="text-align: center; color: #333;">📋 Order Status</h2>
+    <script>
+        let orderstatus = "Delivered";
+        switch (orderstatus) {
+            case "Pending":
+                document.write('<span style="background-color: #03A9F4; color: black; padding: 2px; ">⏳ Order pending. Wait for confirmation.</span><br><br>');
+                break;
+            case "In_progress":
+                document.write('<span style="background-color: #4CAF50; color: black; padding: 2px; ">👨‍🍳 Cooking in progress.</span><br><br>');
+                break;
+            case "Ready":
+                document.write('<span style="background-color: #9E9E9E; color: black; padding: 2px; ">✅ Order ready. Serve immediately.</span><br><br>');
+                break;
+            case "Delivered":
+                document.write('<span style="background-color: #4CAF50; color: black; padding: 2px; ">📦 Order delivered to the table.</span><br><br>');
+
+            default:
+                document.write('<span style="background-color: #F44336; color: black; padding: 2px; ">❓ Unknown order status.</span><br><br>');
+        }
+
+    </script>
+    <h2 style="text-align: center; color: #333;">🍽️ Today's Menu</h2>
+    <script>
+        var menu = [
+            { name: "Pancakes", Available: true },
+            { name: "Pongal", Available: false },
+            { name: "Dosai", Available: true },
+            { name: "Idly", Available: true },
+            { name: "Vadai", Available: false },
+            { name: "Omelette", Available: false }
+        ];
+        for (var i = 0; i < menu.length; i++) {
+            if (menu[i].Available) {
+                document.write('<span style="background-color: #4CAF50; color: white; padding: 5px;">' + menu[i].name + " - Available ✅</span><br><br>");
+            } else {
+                document.write('<span style="background-color: #F44336; color: white; padding: 5px; ">' + menu[i].name + " - Not Available ❌</span><br><br>");
+            }
+        }
+    </script>
+    <h2 style="text-align: center; color: #333;">🥞 Serving Pancakes (While Loop)</h2>
+    <script>
+        var PancakesAvailable = 0;
+        var CustomerNumber = 1;
+
+        while (PancakesAvailable > 0) {
+            document.write('<span style="background-color: #FF9800; color: white; padding: 5px;">' + "Customer:" + CustomerNumber + " is served a pancake. 🍴 Remaining: " + (PancakesAvailable - 1) + "</span><br>");
+            PancakesAvailable--; // one pancake served
+            CustomerNumber++; // move to next customer
+        }
+        document.write('<span style="background-color: #FF9800; color: white; padding: 5px;">' +
+            "Sorry! Pancakes are finished. Come back later. 😔" + " </span><br>");
+    </script>
+    <h3 style="text-align: center; color: #333;"> Do While Loop with 0 Pancakes</h3>
+    <script>
+        var PancakesAvailable = 0;
+        var CustomerNumber = 1;
+        do {
+            document.write('<span style="background-color: #4CAF50; color: white; padding: 5px;">' + "Customer:" + CustomerNumber + " is served a pancake. 🍴 Remaining: " + (PancakesAvailable - 1) + "</span><br>");
+            PancakesAvailable--; // one pancake served
+            CustomerNumber++; // move to next customer
+        } while (pancakesAvailable > 0);
+
+    </script>
+</body>
+
+</html>
