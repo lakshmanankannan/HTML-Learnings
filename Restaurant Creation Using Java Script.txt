@@ -1,0 +1,29 @@
+JavaScript Served Hot — Restaurant Edition! 🍕
+
+Practicing loops and conditions got tastier when I turned it into a restaurant project 😄
+
+let menu = ["Idly", "Dosai", "Pongal"];
+for(let i=0; i<menu.length; i++){
+  document.write(menu[i] + " is ready to serve 🍽️<br>");
+}
+
+let pancakes = 3, customer = 1;
+while(pancakes > 0){
+  document.write("Serving Customer #" + customer + "<br>");
+  pancakes--; customer++;
+}
+
+do {
+  document.write("Preparing one more pancake 🥞<br>");
+} while(pancakes > 0);
+
+let order = "Ready";
+switch(order){
+  case "Ready": document.write("✅ Order is ready to serve!"); break;
+  default: document.write("⏳ Cooking...");
+}
+
+
+From for loops to do...while, every concept felt more engaging when applied to a real-world scenario — like running a restaurant! 🍴
+
+#JavaScript #WebDevelopment #CodingJourney #Frontend #LearningByDoing

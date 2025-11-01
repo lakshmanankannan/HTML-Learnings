@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-E.Commerce</title>
+    <link rel="Icon" type="image/png" href="/L-Logo.png">
+    <link rel="stylesheet" href="/Style_CSS.css">
+    <style>
+        
+        body {
+            background-color: bisque;
+            border: 3px solid black;
+            width: 100%;
+            height: 100%;
+            padding: 2px;
+        }
+
+        * {
+            margin: 2px;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(156, 226, 156);
+            margin: 5px;
+            padding: 5px;
+            position: sticky;
+            top: 0;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin: 10px;
+            font-size: x-large;
+        }
+
+        .Num1 {
+            font-weight: bolder;
+        }
+
+        .Num1 img {
+            object-fit: cover;
+            border-radius: 40px;
+        }
+
+        .Num2 img {
+            object-fit: cover;
+            border-radius: 40px;
+        }
+
+        @media only screen and (max-width:1000px) {
+
+            main,
+            .Num1,
+            .Num2,
+            .Num3,
+            .Num4,
+            nav {
+                width: 100%;
+                float: none;
+                justify-content: space-between;
+            }
+        }
+
+        main {
+            text-align: center;
+            margin-top: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: larger;
+        }
+
+        .Num3 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border: 3px solid black;
+            margin: 30px;
+            padding: 20px;
+            background-color: moccasin;
+            text-align: center;
+            font-size: larger;
+        }
+
+        .Num4 {
+            border: 3px solid black;
+            width: 100%;
+            text-align: center;
+            font-size: x-large;
+            background-color: pink;
+        }
+
+        .Num4 a {
+            margin: 10px;
+            padding: 8px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .Num4 p {
+            position: sticky;
+            align-items: center;
+            bottom: 0;
+            background-color: red;
+        }
+
+        #contact button {
+            background-color: #4CAF50;
+            color: white;
+            border: 3px solid black;
+            padding: 10px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #contact button:hover {
+            background-color: blue;
+        }
+
+        .Num5 {
+            display: flex;
+            justify-content: space-between;
+            padding: 3%;
+        }
+
+        .Num6,
+        .Num7,
+        .Num8 {
+            margin: 5px;
+            padding: 5px;
+            border: 3px solid black;
+            font-size: larger;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="Num1">
+                <img src="/L_Logo.png" alt="Profile" width="80px" height="80px" style="vertical-align: middle;">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Service</a>
+                <a href="">Contact</a>
+            </div>
+            <div class="Num2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEt4lId3wZS5qsRVq9uL3BiJcTaU2kVFgkmQ&s"
+                    width="80px" height="80px">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to LE-Clothing</h2><br>
+        <p>We can’t fix your Monday, but we can fix your outfit!</p>
+        <p>Where fashion meets convenience!</p>
+    </main><br>
+    <article>
+        <div class="Num3">
+            <p>We bring you the latest styles, trendiest fits, and timeless classics — all just a click away. Whether
+                you’re dressing up for a party, heading to work, or chilling at home, we’ve got outfits that make you
+                feel
+                you.</p>
+
+            🛍️ Shop smarter. Dress better. Look amazing.
+        </div>
+        <div>
+            <h2> Why Choose Us?</h2>
+            <ul>
+                <li>🧵 Handpicked fabrics for maximum comfort</li>
+                <li>🎨 Designs inspired by global trends</li>
+                <li>🚚 Fast shipping and easy returns</li>
+                <li>💬 Customer-first support</li>
+            </ul>
+        </div><br><br>
+        <h2> 🛒 Products</h2>
+        <div class="Num4">
+
+            <a href=""><b>👕 Men’s Collection – From crisp shirts to comfy tees:</b><br> <img
+                    src="https://i.etsystatic.com/39609446/r/il/e73333/5826309007/il_1588xN.5826309007_7cl0.jpg" alt=""
+                    width="1000px" height="1400px"></a><br>
+            Clothes that make you look like you actually know what you’re doing with your life. From “I just rolled out
+            of bed” tees to “I have my life together” shirts — we’ve got all the vibes covered. Dress smart, feel
+            awesome, and pretend adulthood is easy!<br><br>
+            <a href=""><b>👗 Women’s Collection – Chic, classy, and effortlessly stylish:</b><br> <img
+                    src="https://www.bullionknot.com/cdn/shop/files/RDM_1364_500KB.jpg?v=1752041549&width=1200" alt=""
+                    width="1000px" height="1400px"></a><br>
+            Where timeless beauty meets modern grace. Our Women’s Collection features handpicked fabrics, elegant
+            silhouettes, and meticulous detailing — designed for women who know that confidence never goes out of
+            style.<br><br>
+            <a href=""><b>🧥 Unisex & Streetwear – For those who like to break the rules of fashion:</b><br> <img
+                    src="https://i.pinimg.com/564x/d5/90/f6/d590f62b5542b16aa2612d724c58f579.jpg" alt="" width="1000px"
+                    height="1400px"></a><br>
+            Where comfort meets rebellion. Our Unisex Streetwear line blends sleek designs with street-inspired edge —
+            perfect for those who prefer timeless black, bold graphics, and that perfectly oversized fit. Genderless.
+            Limitless. Iconic.
+            <p>✨ Don’t miss our Seasonal Sale — up to 50% off on select styles!</p>
+        </div>
+    </article><br>
+    <section class="Num5">
+        <div class="Num6">
+            <img src="https://nobero.com/cdn/shop/files/og.jpg?v=1744007258" width="370px" height="400px">
+            <br> Classic Green T-Shirt
+            <p>500 INR</p>
+        </div>
+        <div class="Num7"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIMMstGVEwqmA0AU5g8UfL-B6FDyru9CoR5Q&s" width="370px" height="400px">
+            <br> Cotton Saree
+            <p>10000 INR</p>
+        </div>
+        <div class="Num8"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4ufl6woVetv3Yd_6Lfq7FVJ9k5HdXRYOtQA&s" width="370px" height="400px">
+            <br> Foot Wear
+            <p>2000 INR</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2><u>Join Our Newsletter</u></h2>
+        <form method="post" action="https://formsubmit.co/luxmanan1998@gmail.com" target="blank">
+            <label for="name">Full Name:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name"><br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com"><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="33" required
+                placeholder="Type your message here..."></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+
+</html>

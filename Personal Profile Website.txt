@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lakshmanan Website</title>
+    <style>
+        /* Container for nav */
+        #Entire {
+            background-color: rgb(125, 223, 236);
+            height: 70%;
+        }
+
+        .box1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: gold;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            /* align icons left by default because of flex start */
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            /* remove underline */
+            border: none;
+        }
+
+        .social-icons img {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: none;
+        }
+
+        .box1 h1 {
+            margin: 0;
+            font-size: 32px;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        table {
+            width: 90%;
+            margin: 10px;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            border-color: black;
+            border-style: ridge;
+            border-width: 7px;
+        }
+
+        th,
+        td {
+            border: 3px solid green;
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        thead th {
+            background-color: silver;
+        }
+
+        tbody th {
+            background-color: silver;
+        }
+
+        form {
+            width: 350px;
+            margin: 10px;
+            padding: 20px;
+            border: 5px solid black;
+            box-sizing: border-box;
+            background: goldenrod;
+            font-family: 'Times New Roman', Times, serif
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: 3px solid black;
+            padding: 10px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .skill-card {
+            background-color: palegreen;
+            border: 3px solid black;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .fixed-header {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        /* Space below header */
+        .spacer {
+            height: 70px;
+        }
+
+        /* Sticky nav */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            padding: 15px;
+
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        /* Relative container */
+        .relative-box {
+            position: relative;
+            background: #e0e0e0;
+            padding: 20px;
+            height: 100px;
+            margin-top: 20px;
+        }
+
+        /* Absolute element inside relative */
+        .absolute-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: crimson;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="box1">
+            <div class="social-icons">
+                <a href="https://github.com/lakshmanankannan" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
+                </a>
+                <a href="https://www.linkedin.com/in/lkanna98/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+                </a>
+                <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" />
+                </a>
+                <a href="https://instagram.com/yourprofile" target="_blank" title="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+                </a>
+            </div>
+            <h1>*^*^*^*&nbsp; Lakshmanan Kannan&nbsp; *^*^*^*</h1>
+            <div class="profile-view">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW2Jerdx1QEre77oFaf4qB-qeNpXaCWyUWNA&s"
+                    alt="Profile Picture" width="50px" height="50px" />
+            </div>
+        </nav>
+    </header>
+</body>
+
+<body id="Entire">
+    <main><br>
+        <h2><u>Professional Summary:</u></h2>
+        <p>I am a System Engineer with over 6 years of experience in software testing, user-end support, and defect
+            management using tools like Octane, JIRA, and Remedy. Currently, I am expanding my technical skills by
+            learning Python, JavaScript, HTML5, and CSS3. My focus is on delivering user-focused solutions that enhance
+            software quality and usability. I am passionate about continuous learning and applying new technologies
+            effectively. I aim to contribute to projects that require both technical expertise and problem-solving
+            abilities.</p>
+    </main>
+    <article>
+        <h2><u>My Favourite Websites:</u></h2>
+        <ul>
+            <li>Google</li>
+            <li>Yahoo</li>
+            <li>Mozilla</li>
+            <li>Safari</li>
+        </ul>
+        <h2><u>My Favourite Colours:</u></h2>
+        <ol>
+            <li>Red</li>
+            <li>Green</li>
+            <li>Blue</li>
+            <li>Black</li>
+        </ol>
+    </article>
+    <section>
+        <h2><u>Education:</u></h2>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th scope="col">School & Institute</th>
+                    <th scope="col">KMHSS</th>
+                    <th scope="col">VMHSS</th>
+                    <th scope="col">LMHSS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr align="center">
+                    <th scope="row">10th</th>
+                    <td style="color: darkorange;">80%</td>
+                    <td colspan="2" style="color: darkorange;">90%</td> <!-- colspan 2: spans Morning & Afternoon -->
+                </tr>
+                <tr align="center">
+                    <th scope="row" rowspan="2">11th & 12th</th> <!-- rowspan 2: spans two rows -->
+                    <td scope="row" style="color: darkorange;">0</td>
+                    <td scope="row" style="color: darkorange;">75%</td>
+                    <td scope="row" style="color: darkorange;">69%</td>
+                </tr>
+                <tr align="center">
+                    <td scope="row" style="color: darkorange;">61%</td>
+                    <td scope="row" style="color: darkorange;">62%</td>
+                    <td scope="row" style="color: darkorange;">63%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="contact">
+        <h2><u>Contact Me:</u></h2>
+        <form method="post" action="https://formsubmit.co/luxmanan1998@gmail.com">
+            <label for="name">Full Name:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name"><br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com"><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="33" required
+                placeholder="Type your message here..."></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <section class="skills-section">
+        <h2><u>My Skills:</u></h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS3</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Git</div>
+            <div class="skill-card">JIRA</div>
+        </div>
+    </section>
+    <footer>
+        <div class="fixed-header">
+            🔒 Thank you for visiting my page
+        </div>
+
+        <div class="sticky-nav">
+            <h1>📌 Hello Everyone</h1>
+        </div>
+
+        <div class="relative-box">
+            🧱 Relative Box (container)
+            <div class="absolute-box">
+                🎯 Absolute Inside
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia maxime laborum excepturi a! Assumenda
+            exercitationem omnis optio voluptates earum sed quasi quis velit est eum, rerum, perferendis maxime at
+            tenetur rem sunt nobis laboriosam repellat amet provident ea minus ipsa? Aut, magnam. Quam nobis officiis
+            nesciunt! Perspiciatis cum recusandae doloribus aperiam. Architecto, ad laborum facilis perferendis
+            temporibus corporis distinctio voluptates et maiores at reiciendis voluptatibus unde mollitia! Quam deserunt
+            quasi natus possimus dicta perspiciatis quas provident aut soluta illum ab excepturi, veritatis, eum ullam.
+            In ea aliquam neque ab praesentium! Incidunt ut, eos, nemo iusto vel ea illum quo ducimus officia autem
+            delectus repellendus est dignissimos doloribus assumenda ullam nam fuga corrupti in dolores. Aperiam dolor
+            veritatis sunt aut dolores eius cumque dolore vero maxime repellat, voluptates voluptas culpa aspernatur
+            atque exercitationem accusantium minus, vel, quia eum fugiat magnam? Minus saepe vero, laborum atque,
+            aliquam necessitatibus deleniti, at reiciendis beatae eius magnam nulla est mollitia deserunt esse
+            praesentium rerum ratione fugiat quae repudiandae molestiae et aliquid itaque. Ipsum fuga ut nesciunt
+            repellat quam unde et. Architecto fugiat tempora qui, veniam aut possimus alias quibusdam totam eaque
+            voluptate labore asperiores quaerat cupiditate nemo dignissimos officia earum minima similique debitis
+            veritatis dolorem? Dolorem repellat, molestiae ad voluptates aliquid ducimus doloremque nesciunt hic
+            possimus blanditiis obcaecati quidem impedit quasi omnis, distinctio illum inventore alias laudantium iure
+            accusantium, expedita odit! Delectus nisi maxime repellat quas ducimus eveniet labore, fugit eos tempora
+            molestiae illo fuga excepturi minus eius rem cumque culpa facilis officiis libero perspiciatis numquam quam
+            laudantium! Cumque, sequi voluptatem itaque perspiciatis, doloribus maiores sint adipisci et voluptates
+            voluptas odit pariatur fugit ad veritatis ab cupiditate delectus culpa est. Voluptatibus molestiae animi,
+            dolorum sequi veniam quidem aliquid neque quos sunt modi, cumque eius quis fugit aliquam? Veniam recusandae
+            laudantium incidunt voluptatem eligendi laborum exercitationem velit possimus voluptates quo tempore quia
+            dolor eaque in necessitatibus obcaecati deleniti rem, neque nostrum voluptatum atque inventore aliquam natus
+            optio. Quasi voluptate aperiam tempore eligendi maxime, sequi nemo provident, doloribus sapiente optio ipsa
+            saepe animi ullam rerum eos delectus quis, tenetur est? Cumque magni possimus veritatis blanditiis quod
+            itaque quisquam asperiores, sit tempora accusantium nisi harum adipisci, magnam cum doloribus sequi amet
+            nostrum ut. Omnis reiciendis maiores explicabo, accusantium ad, libero, tempore aliquam modi recusandae
+            eveniet dolorem praesentium animi neque. Ut accusamus soluta quo rem! Adipisci nostrum doloribus, temporibus
+            quaerat consectetur tenetur vitae dolor omnis corrupti alias labore. Aperiam nobis nihil ea officiis
+            laboriosam enim, laborum sequi sed nisi blanditiis assumenda perspiciatis necessitatibus aliquam dolores a
+            dolorum. Repellat ut rerum consequuntur quam, sed pariatur laudantium voluptates fuga facere officia unde,
+            tempora omnis vel. Provident at placeat autem nulla? Praesentium labore vero laudantium obcaecati nostrum
+            maxime quo odio vitae porro expedita repudiandae placeat, repellendus, numquam adipisci distinctio nesciunt
+            cupiditate ex cumque dolore asperiores tenetur earum illum autem consequatur. Maiores, quod reprehenderit.
+            Nostrum sed omnis ea veritatis nulla accusantium nam repellat voluptatum, cupiditate consequatur facilis
+            eligendi error dolorem quos molestiae architecto, earum reiciendis ullam velit! Consequuntur ducimus laborum
+            temporibus facere quod nostrum accusantium ipsa nulla magnam vel atque molestias, reiciendis, placeat non
+            ad. Iste, ex. Neque accusamus totam fuga facere velit repellendus harum doloremque ipsum accusantium esse
+            repellat soluta voluptatem natus perspiciatis alias, quos voluptate! Ut nostrum alias, accusamus earum
+            perferendis eligendi? Necessitatibus quisquam, facilis doloremque sit quas laudantium quibusdam possimus
+            numquam aperiam? Repudiandae esse doloremque neque sunt ut suscipit molestias recusandae cum. Repudiandae
+            laborum expedita corporis ab. Praesentium adipisci quo inventore deleniti, impedit, asperiores ipsa fugiat
+            quisquam nobis nihil dolorem nam enim illo in odio sint dolor quia! Distinctio voluptatem esse dolorum
+            voluptatibus, quos fuga dolore deserunt mollitia accusantium blanditiis nesciunt provident a laborum cum
+            enim temporibus porro quisquam. Incidunt nobis commodi praesentium omnis! Eligendi doloremque neque nostrum
+            blanditiis a accusantium quam quod autem nobis dolores ipsa explicabo iure doloribus error, reprehenderit
+            ipsam architecto at mollitia, officiis qui unde quasi. Sequi possimus, rerum iusto esse, praesentium eius
+            illo voluptatibus voluptatem aliquam dignissimos enim impedit expedita, atque inventore dolores ullam
+            asperiores vel dolor qui. Laudantium dolorum expedita quam, modi nobis culpa consectetur saepe laborum
+            possimus ad, ipsam temporibus itaque blanditiis iste praesentium? Delectus quo tempora ducimus, quibusdam
+            eius accusantium nihil, itaque natus nemo qui, odio veniam doloremque error facilis explicabo impedit ab.
+            Ipsum, eius optio deserunt corporis itaque incidunt aperiam, beatae ab animi accusamus, molestias amet dicta
+            culpa harum iste facilis. Qui atque vero ut natus aliquam ex nisi doloremque dolorum magnam consequatur
+            ratione doloribus molestiae, quis obcaecati eum quas sapiente sint veniam quisquam rem sit nostrum, ipsa
+            veritatis. Mollitia adipisci sequi nostrum perspiciatis hic, ea tempora nisi temporibus odio quaerat illum
+            ducimus eligendi eaque cupiditate aperiam obcaecati eveniet tempore repudiandae? Officiis nostrum quibusdam
+            nesciunt minus assumenda exercitationem sapiente asperiores accusamus doloribus! Asperiores odit quasi hic
+            accusamus labore odio eum facilis? Perferendis aspernatur esse tempore odit voluptates consectetur,
+            molestiae minima deleniti aperiam, sint omnis ex fugit nemo laboriosam, nobis quia culpa quaerat corporis?
+            Alias cum, libero saepe error hic possimus repellat maxime est autem rem aut accusamus quisquam, rerum qui
+            fugit fugiat. Autem recusandae officiis error quae reprehenderit qui nemo, obcaecati vitae eaque quis quos?
+            Cumque similique esse voluptatibus quidem rem possimus nemo magnam aut pariatur. Itaque necessitatibus fuga
+            perferendis aspernatur vero natus quas quia, doloribus distinctio, corporis asperiores ab esse tenetur
+            recusandae, illo a adipisci! Hic laborum natus repellendus tenetur, nobis nihil nesciunt voluptates aperiam
+            velit neque! Esse ducimus voluptatum aperiam est exercitationem repellat perspiciatis itaque, vero sit vitae
+            quos aspernatur consequatur amet asperiores sequi reiciendis laudantium deleniti hic reprehenderit
+            recusandae soluta earum impedit! Quis possimus quia non tempora voluptatum qui consequatur ipsa? Numquam
+            magni voluptatem itaque rerum esse, mollitia asperiores veritatis hic ratione, adipisci pariatur obcaecati.
+            Tempora iure quod quidem officiis voluptas rem voluptatibus explicabo repudiandae nihil accusantium itaque
+            ab, dolores nam sequi porro illum inventore fuga deserunt, ad asperiores odio corporis eaque! Fugit ut sint
+            esse voluptatibus blanditiis quo dicta provident fugiat delectus, fuga quidem eveniet ipsam facere,
+            accusamus sequi cumque atque id, reprehenderit veniam earum numquam debitis dolore. Architecto
+            exercitationem assumenda corrupti accusamus eligendi voluptas sit maxime?Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Ducimus hic ut molestiae reprehenderit! Autem
+            molestiae obcaecati voluptate quisquam deserunt voluptas, cupiditate consequuntur nostrum nobis sapiente qui
+            sed voluptatum debitis temporibus velit, ea labore alias exercitationem nulla expedita? Explicabo aperiam
+            nisi, illo animi labore unde velit placeat recusandae earum nemo delectus natus magnam libero consequatur
+            ipsa ex error, perferendis optio. Laudantium, veniam, voluptatem facere asperiores necessitatibus eaque quam
+            porro quas provident adipisci aliquam delectus reprehenderit iusto optio dolorum animi consequatur officiis
+            sequi cupiditate error inventore incidunt? Soluta, in nobis. Fugiat quae doloremque sed. Voluptatibus neque
+            animi quis eligendi, hic laborum tenetur vero illo rerum placeat commodi iusto omnis fuga quaerat accusamus
+            rem ad voluptatem nulla soluta culpa? Tempora veritatis laudantium ad earum quo sit natus facilis
+            necessitatibus tenetur commodi odit optio pariatur qui, repellat veniam. Eos, non inventore nemo recusandae
+            at sequi, consequatur laudantium magnam ex libero pariatur atque ad impedit aperiam voluptatibus
+            necessitatibus quasi dicta minus cumque vitae similique. Omnis molestiae deleniti, voluptatem doloremque
+            quaerat ullam exercitationem minus laboriosam! Porro, est voluptate. Beatae, sapiente id aliquam,
+            consequatur facilis quaerat ab labore velit perspiciatis commodi porro numquam enim repellat soluta culpa
+            dignissimos neque aperiam eum dolorem dolor rerum? Nulla, vel architecto quasi saepe accusamus unde aliquam
+            ipsam illo aperiam impedit exercitationem corporis est magnam recusandae, praesentium magni repudiandae
+            reiciendis voluptatem, quam dolore aspernatur deleniti ea? Dignissimos, impedit veniam deleniti sapiente,
+            quaerat omnis voluptatum voluptatibus saepe vel quod labore fugiat. Impedit id repudiandae, possimus,
+            corporis debitis animi ipsa neque at nemo quia fugit cum alias necessitatibus itaque, deleniti eligendi
+            repellendus soluta iste qui ab voluptatum! Sit, earum mollitia omnis nihil suscipit harum, laboriosam cum
+            incidunt animi eum dolores culpa eos nostrum aliquam! Maxime neque magni, veritatis temporibus aliquam
+            impedit accusantium quis harum repellendus consequatur fuga quo doloribus excepturi labore quod qui, ipsa
+            voluptas, nam est expedita praesentium quidem quaerat? Nulla autem accusantium impedit tempore sunt eius
+            ratione officiis, assumenda voluptatem, facilis perspiciatis adipisci neque, alias voluptate veritatis?
+            Repellat cum ex nobis quaerat vitae, excepturi consequuntur consequatur provident voluptatem dolor numquam
+            libero quos voluptates fugit accusamus iste assumenda sed suscipit quidem ab quae. Voluptate ea distinctio
+            natus maiores libero ad praesentium provident corporis sed animi repudiandae earum assumenda perspiciatis,
+            officiis quasi recusandae est, veritatis eius explicabo saepe? Iusto aperiam beatae architecto. Recusandae
+            nemo nulla aspernatur provident reprehenderit dicta repudiandae quod, ut aliquid nobis, quasi nisi, soluta
+            dolor. Fuga, nostrum corrupti. Quisquam, sapiente. Natus sint adipisci distinctio perferendis provident
+            recusandae, dolores quas quaerat voluptatum eius voluptates eligendi aliquid necessitatibus nostrum non.
+            Veniam soluta eius quaerat ab ea aut incidunt rem omnis officia quod ad est velit cum asperiores magnam
+            doloremque placeat laudantium, hic perferendis. Alias, repudiandae modi. Dolorem ullam placeat ratione
+            doloremque tenetur quas, similique laudantium repudiandae ipsam magnam sapiente? Numquam iusto quibusdam
+            reiciendis quas eos sed ipsam consequuntur vitae modi enim? Aperiam necessitatibus saepe natus magni commodi
+            esse nostrum iure facere ut, quaerat fugiat aspernatur asperiores mollitia omnis itaque. Repellat magni sit
+            ipsam a soluta repudiandae numquam commodi, earum, atque quasi nisi iure.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, unde quis quo molestiae consequatur quam
+            suscipit nobis maxime doloribus, repellat expedita vitae sit incidunt! Molestiae ipsam, optio aspernatur
+            cupiditate voluptatem ratione nulla ullam, dolor saepe reiciendis porro natus autem totam soluta omnis
+            aperiam quibusdam assumenda sit perspiciatis expedita voluptate veniam eveniet dolorem. Unde, dolorum sit?
+            Ipsam vel corrupti hic sint sed est labore illo. Eveniet, quas. Deleniti nostrum fugit quo rerum autem esse
+            ducimus repudiandae id omnis delectus ab dolores quaerat dolor dolorem, officia dicta minus veritatis
+            labore, quia praesentium cum. Facilis amet quo nobis saepe eaque, sequi laborum explicabo dolores earum?
+            Quibusdam rem numquam eius saepe sit neque autem doloribus sint eos expedita voluptas, architecto cumque
+            sunt modi voluptatem nisi aliquam assumenda officiis qui voluptatum facilis nostrum, quam mollitia. Ad
+            possimus rem saepe asperiores, fuga quam nemo architecto sunt nobis vel voluptatem aspernatur corporis
+            voluptas repudiandae dolores molestias enim sapiente perferendis consequatur placeat perspiciatis sed
+            suscipit soluta. Totam iste repellendus cum asperiores possimus, ab dignissimos neque autem consequuntur,
+            corporis sequi dolorem rerum cupiditate reiciendis mollitia. Nesciunt debitis tempore fugiat molestiae saepe
+            voluptas mollitia quisquam doloremque temporibus? Eum, blanditiis reprehenderit. Perferendis esse quis
+            distinctio dolore incidunt vero repellendus velit assumenda. Numquam maxime odit voluptatem obcaecati
+            necessitatibus optio sed odio, rerum perspiciatis fugiat atque at expedita et! Excepturi suscipit, ad nobis
+            voluptas hic voluptatum aliquam repellat exercitationem delectus, asperiores culpa perferendis, ipsum ex
+            minima eligendi at necessitatibus quam. Cumque recusandae, aperiam excepturi tenetur voluptatum minus
+            perspiciatis obcaecati repellendus sunt aliquid fugiat alias amet aliquam hic mollitia ratione deleniti rem
+            quas itaque? Consequatur alias nam iusto, dicta pariatur, excepturi praesentium sapiente laboriosam velit
+            sunt facilis aperiam nemo cum quisquam nobis, consequuntur tenetur unde aliquid necessitatibus vel quos
+            architecto id amet. Asperiores sint facere sit omnis et rerum officiis ratione, error maiores corrupti vero
+            autem quia, itaque neque sapiente quos, repellat mollitia minus. Ducimus, impedit fuga eveniet enim harum
+            ratione eligendi explicabo! Exercitationem inventore quas adipisci harum assumenda fugit. Suscipit,
+            consequatur deserunt. Excepturi perspiciatis fugit impedit quas eum voluptatem, incidunt aperiam dolore
+            distinctio ullam molestias, voluptate iste alias error facere ut, veritatis odio sequi quos nulla architecto
+            laboriosam itaque quasi. Eligendi aliquid deserunt reiciendis, a iusto dolor voluptatem placeat quo
+            recusandae exercitationem natus suscipit animi velit molestiae minima ipsam vel necessitatibus, libero eum?
+            Exercitationem, numquam aliquam similique suscipit corporis itaque quasi quae necessitatibus, corrupti
+            beatae pariatur sunt officia. Asperiores, quae ipsa. Exercitationem, laudantium.
+        </p>
+        <p>&copy; 2025 My Profile. All rights reserved.</p>
+        <p>Follow me on Social Media:
+            <a href="">Instagram</a>&nbsp;
+            <a href="">Facebook</a>&nbsp;
+            <a href="">Whatsapp</a>
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam nemo optio, voluptatibus voluptate voluptatem
+            hic, et nihil perferendis iste quidem assumenda reprehenderit quisquam omnis, praesentium quo labore ut est
+            tenetur atque ipsum enim? Odio dolorem soluta commodi quas alias quidem perspiciatis, facere fugit quia
+            neque! Unde excepturi expedita vel quaerat!</p>
+    </footer>
+</body>
+
+</html>
