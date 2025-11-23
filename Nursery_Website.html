@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursery_Website</title>
+    <script>
+        window.onload = function () {
+            if (localStorage.getItem("loggedIn") !== "yes") {
+                window.location.href = "Login Page.html";
+            } else {
+                document.body.style.display = "block";
+            }
+        };
+    </script>
+    <link rel="Icon" type="image/png" href="/Logo/Nursery_Round.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .Top {
+            display: flex;
+            position: fixed;
+            top: 0;
+            justify-content: space-evenly;
+            width: 100%;
+            background-color: #4CAF50;
+            color: whitesmoke;
+            font-weight: bolder;
+            margin: auto;
+            padding: 10px;
+        }
+
+        body {
+            margin: 10px;
+            padding: 5px;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+
+        .Logo {
+            cursor: pointer;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            /* centers search bar */
+            align-items: center;
+            padding: 20px 40px 60px;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /* Search bar styling */
+        .search-container {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 600px;
+            width: 50%;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 20px 15px 45px;
+            /* space for icon */
+            border-radius: 50px;
+            border: 2px solid #ccc;
+            outline: none;
+            font-size: 1.2rem;
+        }
+
+        .search-input:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 1.2rem;
+            pointer-events: none;
+        }
+
+        /* Profile dropdown container */
+        .profile-dropdown {
+            position: absolute;
+            /* float to right */
+            right: 40px;
+            /* distance from right edge */
+            cursor: pointer;
+        }
+
+        /* Profile image */
+        .profile-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+        }
+
+        /* Dropdown menu */
+        .dropdown-menu {
+            display: none;
+            /* hidden by default */
+            position: absolute;
+            /* absolute to profile container */
+            top: 60px;
+            /* below the profile image */
+            right: 0;
+            background: #fff;
+            min-width: 150px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            z-index: 100;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Show dropdown on hover */
+        .profile-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .Num1 {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+
+        }
+
+        .Num1 a {
+            font-weight: bolder;
+            text-decoration: none;
+            padding: 10px;
+            font-size: x-large;
+            color: black;
+        }
+
+        .Image1 {
+            display: block;
+            text-align: center;
+        }
+
+        .Image1 img {
+            width: 90%;
+            height: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        .Image123 {
+            display: flex;
+            gap: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 40px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .Offers {
+            display: flex;
+            gap: 50px;
+            margin: 30px;
+            justify-content: space-evenly;
+        }
+
+        .offers1,
+        .offers2,
+        .offers3 {
+            background-color: white;
+            width: 30%;
+            border: 3px dotted green;
+            padding: 10px;
+            border-radius: 1%;
+        }
+
+        .Info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .Details1,
+        .Details2,
+        .Details3,
+        .Details4,
+        .Details5 {
+            display: grid;
+            margin: 2px;
+            padding: 20px;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <div class="Logo">
+            <img src="/Logo/L_Logo.png" alt="Profile" width="180px" height="95px">
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search here...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+
+        <div class="profile-dropdown">
+            <img src="/Logo/Nursery_Round.png" alt="Profile" class="profile-icon">
+            <div class="dropdown-menu">
+                <a href="#">My Profile</a>
+                <a href="#">Settings</a>
+                <a href="#" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div id="welcome" style="font-size: 18px; font-weight: bold; margin: 20px;"></div>
+    <p>One of the most important features is the search bar, which allows users to instantly find specific plants based
+        on name, type, or category. Categories may include indoor plants, outdoor plants, air-purifying plants,
+        flowering plants, medicinal plants, succulents, vegetable plants, bonsai, and more. An organized structure helps
+        users easily explore the various plant collections the nursery offers.</p>
+
+    <p>Each plant listed on the website usually has a dedicated product card or page. This section includes the plant
+        image, its common and botanical names, price, description, sunlight needs, watering instructions, and care tips.
+        Such detailed information helps users make confident buying decisions, especially beginners who may not be
+        familiar with plant care. Adding features like “Add to Cart,” “Buy Now,” and “Wishlist” improves the shopping
+        experience. Some websites also provide expert guidance, gardening blogs, video tutorials, or plant-care guides
+        to educate customers.</p>
+    <nav>
+        <div class="Num1">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Service</a>
+            <a href="">Offers</a>
+            <a href="">Plants</a>
+            <a href="">Blog</a>
+            <a href="">Gifts</a>
+            <a href="">Contact</a>
+        </div>
+    </nav><br>
+    <div class="Image1">
+        <img src="https://www.ugaoo.com/cdn/shop/files/Mobile_Strip_Banner.webp?v=1761552203&width=1500" alt="Image">
+    </div><br>
+    <h1>New Arrivals</h1>
+    <p>A Nursery Plant Website is an online platform designed to help customers explore, learn about, and purchase a
+        wide variety of plants directly from a nursery or garden store. In today’s digital world, people prefer
+        convenient and visually attractive online platforms where they can browse plants, check their details, and order
+        them without physically visiting a store. A nursery plant website serves this purpose by combining appealing
+        plant images, descriptive information, and easy purchasing options in one place.</p>
+
+    <p>The homepage of a nursery plant website usually showcases a clean and fresh design that reflects nature and
+        greenery. High-quality images of plants, pots, gardening tools, and seasonal offers make the site more inviting
+        for users. A banner section may display new arrivals, festive discounts, or best-selling plants to grab customer
+        attention instantly. A clear navigation menu helps users quickly access different sections such as Home, About,
+        Services, Plants, Gifts, Offers, and Contact.</p>
+    <div class="Image123">
+        <div class="Image2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZrKPGjaqrnOht-M-86RENREH7EVkFbir_1A&s"
+                alt="Image" width="400px" height="400px"><br><br>
+            <h3 style="text-align: center;">Nursery Pot</h3>
+            <p style="text-align: center;">₹.1.00</p>
+        </div>
+        <div class="Image3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC-FQ7T6InBUYo8m6NswkFa51B7TRbbl-cOA&s"
+                alt="Image" width="400px" height="400px"><br><br>
+            <h3 style="text-align: center;">Yellow Pot</h3>
+            <p style="text-align: center;">₹.100.00</p>
+        </div>
+        <div class="Image4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY9olTtijT2kpiYJCU07FziE-jb0j-F39AFA&s"
+                alt="Image" width="400px" height="400px"><br><br>
+            <h3 style="text-align: center;">4 Pot with Buddha</h3>
+            <p style="text-align: center;">₹.400.00</p>
+        </div>
+        <div class="Image5">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0R8zxQEAEMR1KoVjJnzV8gWv8zfEfG31BLQ&s"
+                alt="Image" width="400px" height="400px"><br><br>
+            <h3 style="text-align: center;">Veggies Pot</h3>
+            <p style="text-align: center;">₹.1000.00</p>
+        </div>
+    </div>
+    <div class="Offers">
+        <div class="offers1">
+            <h2 style="color: whitesmoke; background-color: darkgreen ;width: 220px; border-radius: 8px;">Free Shipping
+            </h2>
+            <p>Free shipping on all orders above ₹499.</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="offers2">
+            <h2 style="color: whitesmoke; background-color: darkgreen ;width: 190px; border-radius: 8px;">Get 10% Off
+            </h2>
+            <p>Get 10% off on above ₹999.</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="offers3">
+            <h2 style="color: whitesmoke; background-color: darkgreen ;width: 190px; border-radius: 8px;">Get 20% Off
+            </h2>
+            <p>Get 10% off on above ₹1499.</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <p>Another key feature of a nursery website is the responsiveness of the design. Since many users browse through
+        mobile phones, the website must automatically adjust its layout to fit any screen size—desktop, tablet, or
+        mobile. Fast loading speed and optimized images ensure a smooth experience.</p>
+
+    <p>The website may also offer services such as potting, landscaping, garden maintenance, or bulk plant supply for
+        offices and events. Displaying customer reviews, ratings, and testimonials builds trust and encourages new
+        customers to purchase. The contact page typically includes store address, phone numbers, email, and social media
+        links, along with an embedded map for easy location access.</p>
+
+    <p>Security and checkout systems are also essential. A safe and simple payment gateway allows users to pay through
+        UPI, credit/debit cards, or net banking. Order tracking features help customers follow their purchase from the
+        nursery to their doorstep.</p>
+
+    <p>In summary, a nursery plant website is not just an online catalog—it is a complete digital platform that connects
+        plant lovers with quality products and useful gardening knowledge. A well-designed nursery website enhances the
+        brand image, improves customer reach, and provides a pleasant, nature-inspired online shopping experience.</p>
+    <div class="Info">
+        <div class="Details1">
+            <p>About:</p>
+            <a href="">Our Story</a>
+            <a href="">Contact Us</a>
+            <a href="">Careers</a>
+            <a href="">Locate Stores</a>
+            <a href="">Services and Maintenance</a>
+        </div>
+        <div class="Details2">
+            <p>Customer Care:</p>
+            <a href="">Quiz</a>
+            <a href="">Shipping Policy</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Track Order</a>
+            <a href="">FAQs</a>
+        </div>
+        <div class="Details3">
+            <p>Reward:</p>
+            <a href="">Plant Parent reward Club</a>
+            <a href="">Coupons</a>
+        </div>
+        <div class="Details4">
+            <p>Get in Touch:</p>
+            <a href="">Whatsapp at: 9999999999</a>
+            <a href="">Call :8000080000</a>
+            <a href="">Email :yuiyop@yopmail.com</a>
+        </div>
+        <div class="Details5">
+            <p>&copy; 2025 My Travel Blog. </p>
+            <p>All rights reserved.</p>
+            <p>Follow me on Social Media:
+                <a href="">Instagram</a>&nbsp;
+                <a href="">Facebook</a>&nbsp;
+                <a href="">Whatsapp</a>
+            </p>
+        </div>
+    </div>
+    <nav class="Top">
+        <div style="text-align: left;">Free Delivery Above ₹.499.00</div>
+        <div style="text-align: center;"> 3 Plants for just ₹.999.00</div>
+        <div style="text-align: right;"> Home Delivery Available</div>
+    </nav>
+    <script>
+        var username = localStorage.getItem("username") || "User";
+        document.getElementById("welcome").textContent = "Welcome, " + username;
+
+        function logout(){
+            localStorage.removeItem("loggedIn");
+            localStorage.removeItem("username");
+        
+            window.location.href = "Login Page.html";
+        }
+    </script>
+</body>
+
+</html>
