@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #a8e063 0%, #56ab2f 100%);
+            margin: 0;
+        }
+
+        .Box {
+            width: 340px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            text-align: center;
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input {
+            border: 2px solid #cfd8cc;
+            background: #fff;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #66bb6a;
+            box-shadow: 0 0 6px rgba(102, 187, 106, 0.25);
+        }
+
+        button {
+            border: none;
+            background: #4CAF50;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.12s ease, background 0.12s ease;
+        }
+
+        button:hover {
+            background: #3da046;
+            transform: translateY(-1px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="Box">
+        <h2>🌱 Nursery Login</h2>
+        <input type="password" id="User" placeholder="Username" autocomplete="new-username">
+        <input type="password" id="Pass" placeholder="Password" autocomplete="new-password">
+        <button onclick="login()">Login</button>
+    </div>
+    <script>
+        function login() {
+            let U = document.getElementById("User").value.trim();
+            let P = document.getElementById("Pass").value;
+            if (U === "" || P === "") {
+                alert("Please enter both Username and Password.");
+                return;
+            }
+            if (U === "Lakshmanan" && P === "1234") {
+                localStorage.setItem("loggedIn", "yes");
+
+                localStorage.setItem("username", U);
+
+                window.location.href = "Nursery_Website.html";
+            } else {
+                // incorrect credentials
+                alert("Incorrect username or password.");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
