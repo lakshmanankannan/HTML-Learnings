@@ -1,0 +1,11 @@
+{
+  "users": [
+    { "id": 1, "email": "john@example.com", "password": "123456", "name": "John Doe" }
+  ],
+  "attendance": [
+    { "id": 1, "employeeId": 1, "date": "2026-01-25", "status": "Present" }
+  ],
+  "tasks": [
+    { "id": 1, "employeeId": 1, "task": "Complete React Assignment", "status": "Pending" }
+  ]
+}
